@@ -1,0 +1,50 @@
+<!-- 
+	Express App
+	@author Nick Hoffman <hoffman.nick10@gmail.com>
+-->
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+	<head>
+		<title>EJS Test</title>
+
+		<link rel = "Stylesheet" type = "text/css" href = "/css/style.css">
+
+		<!-- Javascript between these tags is executed
+		  Use the below format to render dynamic html (assign your dynmaic text to a variable then fill it in html elements)  -->
+
+	</head>
+	<body>
+
+		<% 
+			var title = "My EJS Page";
+
+			// names array
+			var names = ["Frederick", "Joe", "Gunter", "Heinrich", "Matilda"];
+
+			// generate random number to choose a name to display 
+			var random = Math.floor(Math.random() * names.length);
+
+			// pull a random name
+			var name = names[random];
+
+			var paragraph = "Insert text here!"
+		%>
+
+		<h1><%=title %></h1>
+		<p><%= paragraph %></p>
+
+		<p> Something conditional. </p>
+		<p> Just so you know, my name has 
+		<% if (name.length >= 5) { %>
+			<span> 5 or more letters!!!! </span>
+		<% } else { %>
+			<span> less than 5 characters : ( </span>
+		<% } %>
+		<span> Hello, my name is <strong><%= name %></strong>!</p>
+
+	</body>
+</html> 

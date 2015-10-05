@@ -1,0 +1,57 @@
+doctype strict
+
+html
+
+	head
+
+		title Edit Profile
+
+		link( 
+			rel = "stylesheet", 
+			type = "text/css", 
+			href = "/css/style.css" )
+
+	body 
+
+		div (class = "container width700")
+
+			div (class = "panel panel-primary")
+				
+				div (class = "panel-heading")	
+			
+					h1 (class = "panel-title") Edit Profile
+
+				div (class = "panel-body")	
+
+					- // add name fields
+
+					div (class = "nameField pull-left")
+
+						label (for = "firstNameField") First Name
+
+						input( type ="text", class = "form-control input-lg", placeholder ="First Name", name = "firstNameField" )
+
+						label (for = "lasttNameField") Last Name
+
+						input( type ="text", class = "form-control input-lg", placeholder ="Last Name", name = "lastNameField" )
+
+					div (class = "clearfix")
+
+					- // bio
+
+					div (class = "form-group")
+
+						label(for = "bioField") Bio
+
+						textarea( class = "form-control input-lg", rows = "3", placeholder ="What's on your mind?", name = "bioField")
+
+					- // edit profile form 
+
+					form( action = "/settings/profile", method = "post")
+
+						div( class = "form-group" )
+
+							input( type = "submit", class = "btn btn-primary", value="submit")
+
+							- // Noticed a strange bootstrap issue!
+

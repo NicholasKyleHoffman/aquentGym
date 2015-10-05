@@ -1,0 +1,15 @@
+{
+	"name":"nodeIntro",
+	"version":"0.0.2",
+	"description":"yadda",
+	"author": {
+		"fName":"Nick",
+		"lName":"Hoffman",
+		"email":"hoffman.nick10@gmail.com"
+	},
+	"dependencies":{
+		"express":"*",
+//		"ejs":"*",
+		"jade":"*"
+	}
+}
